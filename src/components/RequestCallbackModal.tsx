@@ -29,6 +29,17 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
       document.body.style.overflow = "";
     };
   }, [open]);
+  const [painArea, setPainArea] = useState<string[]>([]);
+const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const value = e.target.value;
+
+  setPainArea((prev) =>
+    e.target.checked
+      ? [...prev, value]
+      : prev.filter((v) => v !== value)
+  );
+};
+
   return (
     <>
       <button
@@ -162,19 +173,27 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
                 <div>
                   <p className="font-semibold text-center mb-3">SELECT PAIN SITE *</p>
                   <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-base">
-                    {["Knee", "Back", "Neck", "Shoulder", "Others"].map((item) => (
-                      <label key={item} className="flex items-center gap-1 md:gap-2 cursor-pointer text-xs lg:text-base">
-                        <input
-                          type="checkbox"
-                          name="Pain_Area"
-                          required
-                          value={item}
-                          className="h-4 w-4 rounded accent-black"
-                        />
-                        {item}
-                      </label>
-                    ))}
-                  </div>
+      {["Knee", "Back", "Neck", "Shoulder", "Others"].map((item) => (
+        <label
+          key={item}
+          className="flex items-center gap-1 md:gap-2 cursor-pointer text-xs lg:text-base"
+        >
+          <input
+            type="checkbox"
+            value={item}
+            onChange={handlePainAreaChange}
+            className="h-4 w-4 rounded accent-black"
+          />
+          {item}
+        </label>
+      ))}
+    </div>
+    <input
+      type="hidden"
+      name="Pain_Area"
+      value={painArea.join(",")}
+      required
+    />
                 </div>
                 <div>
                   <p className="font-semibold text-center mb-3">CHOOSE PAIN INTENSITY *</p>
