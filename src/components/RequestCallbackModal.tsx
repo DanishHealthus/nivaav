@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const RequestCallbackModal = ({ buttonText, id }: any) => {
@@ -29,7 +29,9 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
       document.body.style.overflow = "";
     };
   }, [open]);
-  const [painArea, setPainArea] = useState<string[]>([]);
+ const [painArea, setPainArea] = useState<string[]>([]);
+  const painAreaRef = useRef<HTMLInputElement>(null);
+
 const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   const value = e.target.value;
 
@@ -80,6 +82,20 @@ const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 acceptCharset="UTF-8"
                 encType="multipart/form-data"
                 className="space-y-4 py-2"
+                 onSubmit={(e) => {
+    if (painArea.length === 0) {
+      e.preventDefault();
+
+      if (painAreaRef.current) {
+        painAreaRef.current.setCustomValidity(
+          "Please select at least one pain area"
+        );
+        painAreaRef.current.reportValidity();
+      }
+    } else {
+      painAreaRef.current?.setCustomValidity("");
+    }
+  }}
               >
                 <input type="hidden" name="utm_source" value="" />
                 <input type="hidden" name="utm_medium" value="" />
@@ -189,11 +205,12 @@ const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       ))}
     </div>
     <input
-      type="hidden"
-      name="Pain_Area"
-      value={painArea.join(",")}
-      required
-    />
+  ref={painAreaRef}
+  type="hidden"
+  name="Pain_Area"
+  value={painArea.join(",")}
+/>
+
                 </div>
                 <div>
                   <p className="font-semibold text-center mb-3">CHOOSE PAIN INTENSITY *</p>
