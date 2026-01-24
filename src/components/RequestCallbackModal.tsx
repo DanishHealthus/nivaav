@@ -15,6 +15,7 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
       { id: 5, title: "Ghaziabad" },
       { id: 6, title: "Faridabad" },
       { id: 7, title: "Jaipur" },
+      { id: 8, title: "Gurugram" },
     ],
   };
 
@@ -120,8 +121,9 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
                     }}
                   />
                   <input
-                    placeholder="Email Address"
+                    placeholder="Email Address *"
                     type="email"
+                    required
                     className="mb-2 w-full rounded-full bg-white px-6 py-2.5 lg:py-4 placeholder:text-sm lg:placeholder:text-base outline-none text-black text-sm lg:text-base"
                   />
                   <div className="relative">
@@ -144,6 +146,7 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
                   <div className="relative">
                     <select
                       name="Dropdown2"
+                      required
                       className="mb-2 w-full appearance-none rounded-full bg-white px-6 py-2.5 lg:py-4 outline-none text-black text-sm lg:text-base"
                     >
                       <option disabled >Preferred Time for call back *</option>
@@ -164,6 +167,7 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
                         <input
                           type="checkbox"
                           name="Pain_Area"
+                          required
                           value={item}
                           className="h-4 w-4 rounded accent-black"
                         />
