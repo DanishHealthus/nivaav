@@ -17,7 +17,6 @@ export default function Header({ menu }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [open, setOpen] = useState<boolean | null>(null);
-
   const pathname = usePathname(); 
   const firstSegment = pathname.split("/")[1];
   const matchedItem = LOCATION_MENU.items.find(
@@ -29,9 +28,8 @@ export default function Header({ menu }: HeaderProps) {
     <header className="fixed top-0 left-0 z-99 w-full bg-gradient-to-t from-[#EEF8FD]/0 font-sans to-white">
       <div className="xl:px-10 2xl:px-24 flex items-center justify-between py-4 px-4">
         <Link href="/">
-          <Image src="/images/logo.svg" alt="Nivaan Logo" width={170} height={40} className="h-10 lg:h-20 lg:bg-white lg:px-6 lg:shadow-lg lg:rounded-4xl" unoptimized/>
+          <Image src="/images/logo.svg" alt="Nivaan Logo" width={200} height={40} className="w-40 lg:w-48 h-10 lg:h-20 lg:bg-white lg:px-6 lg:shadow-lg lg:rounded-4xl" unoptimized/>
         </Link>
-
         <nav className="hidden lg:flex items-center gap-6 lg:gap-3 xl:gap-6 py-2 text-xs xl:text-sm font-medium">
           <div className="bg-white flex items-center gap-2 font-normal rounded-full text-black shadow-lg px-3">
             {centerMenus.map((item) => (
@@ -82,7 +80,7 @@ export default function Header({ menu }: HeaderProps) {
           </div>
         </nav>
         <div className="hidden lg:block">
-          <RequestCallbackModal buttonText="BOOK APPOINTMENT" id="home-book-appointment" />
+          <RequestCallbackModal buttonText="BOOK APPOINTMENT" id="book-appointment" />
         </div>
         <button
           onClick={() => setMenuOpen(true)}
@@ -132,13 +130,11 @@ function ConditionsDropdown({
             </Link>
           ))}
         </div>
-
         {/* RIGHT SIDE */}
         <div className="w-2/3">
           <h4 className="text-sm font-normal text-[#06A1DC] uppercase mb-5">
             Condition
           </h4>
-
           <div className="grid grid-cols-2 gap-3 text-base space-y-2.5 capitalize">
             {active.children?.map((child) => (
               <Link
