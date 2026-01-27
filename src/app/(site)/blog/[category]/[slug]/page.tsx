@@ -63,7 +63,7 @@ export default async function BlogDetailPage({ params }: {
                 Find Relief for Your Pain Area
               </div>
               <div className="flex justify-center">
-                <RequestCallbackModal buttonText='BOOK APPOINTMENT' id="BOOK APPOINTMENT" />
+                <RequestCallbackModal buttonText='BOOK APPOINTMENT' id="book-appointment" />
               </div>
             </div>
           </div>

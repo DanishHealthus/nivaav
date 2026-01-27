@@ -63,7 +63,7 @@ export function TreatmentHeroSection({
                         </p>
                         {button &&
                             <div className="flex justify-center lg:justify-start">
-                                <RequestCallbackModal buttonText={button} id={button} />
+                                <RequestCallbackModal buttonText={button} id="book-consultation" />
                             </div>
                         }
                     </div>

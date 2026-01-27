@@ -90,7 +90,7 @@ export default function ConditionTreatment({ data }: Props) {
                 </div>
                 {data.treatments_button_name &&
                     <div className="flex justify-center">
-                        <RequestCallbackModal buttonText={data.treatments_button_name} id={data.treatments_button_name} />
+                        <RequestCallbackModal buttonText={data.treatments_button_name} id="book-consultation" />
                     </div>
                 }
             </div>

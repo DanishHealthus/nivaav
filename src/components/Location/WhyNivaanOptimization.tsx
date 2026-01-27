@@ -53,7 +53,7 @@ export default function WhyNivaanOptimization({ data }: Props) {
                 {/* CTA */}
                 {data.why_button_name &&
                     <div className="flex justify-center">
-                        <RequestCallbackModal buttonText={data.why_button_name} id={data.why_button_name} />
+                        <RequestCallbackModal buttonText={data.why_button_name} id="book-consultation" />
                     </div>
                 }
             </div>

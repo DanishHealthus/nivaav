@@ -48,7 +48,7 @@ export default function Risks({ data }: any) {
                 {/* CTA */}
                 {data?.risks_button_name &&
                     <div className="flex justify-center">
-                        <RequestCallbackModal buttonText={data.risks_button_name} id={data.risks_button_name} />
+                        <RequestCallbackModal buttonText={data.risks_button_name} id="book-appointment" />
                     </div>
                 }
             </div>

@@ -122,14 +122,14 @@ export default function OtherConditionSection({ data }: Props) {
                                 <div className="flex justify-center mb-4 lg:mb-0">
                                     <RequestCallbackModal
                                         buttonText={data.cta_button_name}
-                                        id={data.cta_button_name}
+                                        id="book-appointment"
                                     />
                                 </div>
                             )}
 
                             {data?.cta_button.title &&
                                 <Link href={data?.cta_button.url} className=" ">
-                                    <button id={data?.cta_button.title} className="text-sm lg:text-base border-2 w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
+                                    <button id="call-now" className="text-sm lg:text-base border-2 w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
                                         {data?.cta_button.title}
                                         <Image
                                             className="group-hover:-rotate-45 w-8 h-8 duration-700 bg-orange-600 rounded-full p-2"

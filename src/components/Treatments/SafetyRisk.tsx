@@ -49,7 +49,7 @@ const SafetyRisk: React.FC<SafetyRiskProps> = ({ data }) => {
             <div className="flex justify-center">
               <RequestCallbackModal
                 buttonText={data.cta_button_name}
-                id={data.cta_button_name}
+                id="book-consultation"
               />
             </div>
           )}

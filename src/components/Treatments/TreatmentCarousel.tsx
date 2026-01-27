@@ -95,7 +95,7 @@ export default function TreatmentCarousel({ data }: Props) {
           />
           {data.treatment_button_name &&
             <div className="flex justify-center">
-              <RequestCallbackModal buttonText={data.treatment_button_name} id={data.treatment_button_name} />
+              <RequestCallbackModal buttonText={data.treatment_button_name} id="book-consultation" />
             </div>
           }
         </div>

@@ -62,7 +62,7 @@ export function HubHeroSection({
                         </div>
                         {button &&
                             <div className="flex justify-center lg:justify-start">
-                                <RequestCallbackModal buttonText={button} id={button} />
+                                <RequestCallbackModal buttonText={button} id="book-appointment" />
                             </div>
                         }
                     </div>

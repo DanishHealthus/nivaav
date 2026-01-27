@@ -82,12 +82,12 @@ export function LocationHeroSection({
                 <div className="block lg:flex justify-center gap-5">
                     {button &&
                         <div className="flex justify-center w-full lg:w-fit mb-4 lg:mb-0">
-                            <RequestCallbackModal buttonText={button} id={button} />
+                            <RequestCallbackModal buttonText={button} id="book-consultation" />
                         </div>
                     }
                     {button1?.title &&
                         <Link href={button1.url} className="w-full lg:w-fit">
-                            <button id={button1.title} className="border-2 text-sm lg:text-base w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
+                            <button id="learn-more" className="border-2 text-sm lg:text-base w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
                                 {button1.title}
                                 <Image
                                     className="group-hover:-rotate-45 w-8 h-8 duration-700 bg-orange-600 rounded-full p-2"

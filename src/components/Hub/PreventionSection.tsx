@@ -73,7 +73,7 @@ export default function PreventionSection({ data }: Props) {
                         )}
                         {data.prevention_button_name &&
                             <div className="flex justify-center  mt-6">
-                                <RequestCallbackModal buttonText={data.prevention_button_name} id={data.prevention_button_name} />
+                                <RequestCallbackModal buttonText={data.prevention_button_name} id="book-appointment" />
                             </div>
                         }
                     </div>

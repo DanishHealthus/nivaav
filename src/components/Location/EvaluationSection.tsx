@@ -16,14 +16,12 @@ export default function EvaluationSection({ data }: Props) {
                         className="space-y-5 text-gray-600 overview-list"
                         dangerouslySetInnerHTML={{ __html: data.evaluation_description }}
                     />
-                </div>}
-
-                
+                </div>}                
                 {/* Bottom CTA */}
                 <div className="text-center cta-treatment-section mt-14">                   
                     {data.evaluation_button_name &&
                         <div className="flex justify-center">
-                            <RequestCallbackModal buttonText={data.evaluation_button_name} id={data.evaluation_button_name} />
+                            <RequestCallbackModal buttonText={data.evaluation_button_name} id="book-consultation" />
                         </div>
                     }
                 </div>

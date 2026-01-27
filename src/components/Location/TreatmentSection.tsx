@@ -83,7 +83,7 @@ export default function TreatmentSection({ data }: Props) {
 
                 {data.conditions_button_name &&
                     <div className="flex justify-center">
-                        <RequestCallbackModal buttonText={data.conditions_button_name} id={data.conditions_button_name} />
+                        <RequestCallbackModal buttonText={data.conditions_button_name} id="book-consultation" />
                     </div>
                 }
             </div>

@@ -95,7 +95,7 @@ export default function Specialists({ data }: Props) {
                     <div className="text-center cta-treatment-section py-8">
                         {data.specialists_button_name &&
                             <div className="flex justify-center">
-                                <RequestCallbackModal buttonText={data.specialists_button_name} id={data.specialists_button_name} />
+                                <RequestCallbackModal buttonText={data.specialists_button_name} id="book-appointment" />
                             </div>
                         }
                     </div>

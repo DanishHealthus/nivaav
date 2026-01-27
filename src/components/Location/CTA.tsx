@@ -5,10 +5,10 @@ interface Props {
     data: any;
 }
 
-export default function CTA({ data }: Props) { 
+export default function CTA({ data }: Props) {
     return (
         <section className="bg-white w-full py-6">
-            <div className="container mr-auto">               
+            <div className="container mr-auto">
 
                 <div
                     style={{
@@ -33,16 +33,13 @@ export default function CTA({ data }: Props) {
                                 <div className="flex justify-center">
                                     <RequestCallbackModal
                                         buttonText={data.cta_button_name}
-                                        id={data.cta_button_name}
+                                        id="book-consultation"
                                     />
                                 </div>
                             )}
-
-                            
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );

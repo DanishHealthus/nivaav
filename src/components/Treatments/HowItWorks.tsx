@@ -90,7 +90,7 @@ export default function HowItWorks({ data }: HowItWorksProps) {
                 <div className="mt-10 text-center">
                     {data.how_button_name &&
                         <div className="flex justify-center">
-                            <RequestCallbackModal buttonText={data?.how_button_name} id={data?.how_button_name} />
+                            <RequestCallbackModal buttonText={data?.how_button_name} id="book-consultation" />
                         </div>
                     }
                 </div>

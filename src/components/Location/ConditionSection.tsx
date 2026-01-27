@@ -88,7 +88,7 @@ export default function ConditionSection({ data }: Props) {
                 <div className="flex justify-center mt-4">
                     {data?.conditions_button.title &&
                         <Link href={data?.conditions_button.url} className=" ">
-                            <button id={data?.conditions_button.title} className="border-2 w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
+                            <button id="book-consultation" className="border-2 w-full uppercase lg:w-fit border-orange-500 text-orange-600 bg-white px-4 py-1.5 2xl:px-6 2xl:py-2 rounded-full font-normal flex justify-between items-center gap-3 hover:scale-105 duration-500 cursor-pointer">
                                 {data?.conditions_button.title}
                                 <Image
                                     className="group-hover:-rotate-45 w-8 h-8 duration-700 bg-orange-600 rounded-full p-2"

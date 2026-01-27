@@ -103,7 +103,7 @@ export default function ClinicSection({ data }: Props) {
 
                 {data.clinic_button_name &&
                     <div className="flex justify-center">
-                        <RequestCallbackModal buttonText={data.clinic_button_name} id={data.clinic_button_name} />
+                        <RequestCallbackModal buttonText={data.clinic_button_name} id="book-consultation" />
                     </div>
                 }
             </div>

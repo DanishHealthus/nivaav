@@ -61,7 +61,7 @@ export default function TargetAudience({ data }: Props) {
         {/* CTA */}
         {data?.target_button_name &&
           <div className="flex justify-center">
-            <RequestCallbackModal buttonText={data?.target_button_name} id={data?.target_button_name} />
+            <RequestCallbackModal buttonText={data?.target_button_name} id="book-consultation" />
           </div>
         }
       </div>

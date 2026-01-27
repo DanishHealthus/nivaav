@@ -64,7 +64,7 @@ export function ConditionHeroSection({
                             {parsedDescription}
                         </p>
                         <div className="flex justify-center lg:justify-start">
-                            <RequestCallbackModal buttonText={button} id={button} />
+                            <RequestCallbackModal buttonText={button} id="book-consultation" />
                         </div>
                     </div>
                     <div className="relative flex justify-center order-1 lg:order-2 lg:py-10">

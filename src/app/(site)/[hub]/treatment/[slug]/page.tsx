@@ -39,7 +39,8 @@ const treatmentpage = async ({ params }: any) => {
                 button={acf?.banner_button_name}
                 image={data?.featured_image}
             />
-            <TreatmentStatsBar stats={acf?.banner_numbers} />
+            {acf?.banner_numbers &&
+            <TreatmentStatsBar stats={acf?.banner_numbers} />}
             <TreatmentSection data={acf} />
         </>
     )

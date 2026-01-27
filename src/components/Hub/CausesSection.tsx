@@ -145,7 +145,7 @@ export default function CausesSection({ data }: Props) {
                     />
                     {data.causes_button_name &&
                         <div className="flex justify-center">
-                            <RequestCallbackModal buttonText={data.causes_button_name} id={data.causes_button_name} />
+                            <RequestCallbackModal buttonText={data.causes_button_name} id="book-appointment" />
                         </div>
                     }
                 </div>

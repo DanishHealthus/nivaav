@@ -26,7 +26,7 @@ const BetterWayCTA: React.FC<BetterWayCTAProps> = ({
 
         {/* Right Button */}
         <div>
-          <RequestCallbackModal buttonText="Book Your Consultation" id="about-book-appointment-consultation" />
+          <RequestCallbackModal buttonText="Book Your Consultation" id="book-consultation" />
         </div>
 
       </div>

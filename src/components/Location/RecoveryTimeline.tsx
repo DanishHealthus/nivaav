@@ -46,7 +46,7 @@ const RecoveryTimeline = ({ data }: Props) => {
                     </div>
                     
                     <div className="flex justify-center pt-7">
-                        <RequestCallbackModal buttonText="Explore Complete Recovery" id="Explore Complete Recovery" />
+                        <RequestCallbackModal buttonText="Explore Complete Recovery" id="book-consultation" />
                     </div>
                     
                 </div>

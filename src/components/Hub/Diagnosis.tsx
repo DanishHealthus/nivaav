@@ -69,7 +69,7 @@ export default function Diagnosis({ data }: Props) {
             </div>
             {data.diagnosis_button_name &&
                 <div className="flex justify-center">
-                    <RequestCallbackModal buttonText={data.diagnosis_button_name} id={data.diagnosis_button_name} />
+                    <RequestCallbackModal buttonText={data.diagnosis_button_name} id="book-appointment" />
                 </div>
             }
         </section>

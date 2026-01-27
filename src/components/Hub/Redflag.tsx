@@ -97,7 +97,7 @@ export default function Redflag({ data }: Props) {
                         )}
                         {data.red_button_name &&
                             <div className="flex justify-center lg:justify-start mt-6">
-                                <RequestCallbackModal buttonText={data.red_button_name} id={data.red_button_name} />
+                                <RequestCallbackModal buttonText={data.red_button_name} id="book-appointment" />
                             </div>
                         }
                     </div>
