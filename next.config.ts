@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "nivaancare.com" }],
+        has: [{ type: "host", value: "www.nivaancare.com" }],
         destination: "https://nivaancare.com/:path*",
         permanent: true,
       },
