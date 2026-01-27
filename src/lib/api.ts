@@ -127,6 +127,13 @@ export async function getCondition(hub: string) {
   return res.json();
 }
 
+export async function getConditionsite() {
+  const res = await fetch(`${BASE_URL}/conditions?fields=condition_type`, {
+    next: { revalidate: 60 },
+  });
+  return res.json();
+}
+
 export async function getSingleCondition(slug: string) {
   const res = await fetch(`${BASE_URL}/conditions/${slug}`, {
     next: { revalidate: 60 },
@@ -137,6 +144,13 @@ export async function getSingleCondition(slug: string) {
 //treatment
 export async function getTreatment(hub: string) {
   const res = await fetch(`${BASE_URL}/treatments?treatment_types=${hub}`, {
+    next: { revalidate: 60 },
+  });
+  return res.json();
+}
+
+export async function getTreatmentsite() {
+  const res = await fetch(`${BASE_URL}/treatments?fields=treatment_types`, {
     next: { revalidate: 60 },
   });
   return res.json();

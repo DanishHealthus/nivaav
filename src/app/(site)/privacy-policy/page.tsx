@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Privacy Policy for Nivaan Care - Your trusted healthcare provider",
   alternates: {
-    canonical: "https://www.nivaancare.com/privacy-policy",
+    canonical: "https://nivaancare.com/privacy-policy",
   },
 };
 const page = () => {

@@ -85,8 +85,8 @@ const Footer3 = () => {
       <div className='h-[1px] w-full bg-[#ffffff99]'></div>
       <div className='text-xs font-light flex flex-row py-6 px-12 gap-6'>
         <span>© 2023 Nivaan. All Rights. Reserved</span>
-        <a href="https://www.nivaancare.com/privacy-policy/">Privacy Policy</a>
-        <a href="https://www.nivaancare.com/terms-and-conditions/">Terms Of Use</a>
+        <a href="https://nivaancare.com/privacy-policy/">Privacy Policy</a>
+        <a href="https://nivaancare.com/terms-and-conditions/">Terms Of Use</a>
       </div>
     </footer>
   );

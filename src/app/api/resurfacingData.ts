@@ -133,7 +133,7 @@ export const Navbar2Links: Navbar2Type[] = [
     id: 5,
     title: "Blog",
     titleHindi: "ब्लॉग",
-    link: "https://www.nivaancare.com/blog/",
+    link: "https://nivaancare.com/blog/",
   },
   {
     id: 6,
@@ -171,13 +171,13 @@ export const Navbar2LinksMob: Navbar2Type[] = [
   // {
   //   id: 4,
   //   title: 'FAQ',
-  //   link: 'https://www.nivaancare.com/faq/'
+  //   link: 'https://nivaancare.com/faq/'
   // },
   {
     id: 5,
     title: "Blog",
     titleHindi: "ब्लॉग",
-    link: "https://www.nivaancare.com/blog/",
+    link: "https://nivaancare.com/blog/",
   },
   {
     id: 5,

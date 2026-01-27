@@ -97,7 +97,7 @@ export const OurCoreteamData: Doctor[] = [
     //     field: "Orthopaedic Surgeon,",
     //     degree: "MBBS, MS – Orthopaedics",
     //     experience: "32+ Years Experience  ",
-    //     // url: "https://www.nivaancare.com/dr-naveen-talwar/"
+    //     // url: "https://nivaancare.com/dr-naveen-talwar/"
     // },
     {
         id: 1,
@@ -106,7 +106,7 @@ export const OurCoreteamData: Doctor[] = [
         field: "Pain Management Specialist",
         degree: "MBBS, DA, DNB",
         experience: "18+ Years Experience ",
-        url: "https://www.nivaancare.com/dr-rohit-gulati/"
+        url: "https://nivaancare.com/dr-rohit-gulati/"
     },
     {
       id: 2,
@@ -115,7 +115,7 @@ export const OurCoreteamData: Doctor[] = [
       field: "Pain Management Specialist",
       degree: "M.B.B.S, DA, FIPM (Germany)",
       experience: "15+ Years Of Experience ",
-      url: "https://www.nivaancare.com/dr-garima-gupta-2/"
+      url: "https://nivaancare.com/dr-garima-gupta-2/"
     },
     {
          id: 3,
@@ -140,7 +140,7 @@ export const OurCoreteamData: Doctor[] = [
       field: "Pain Management Specialist",
       degree: "MBBS, DNB, DA, FIPM",
       experience: "12+ Years Of Experience ",
-      url: "https://www.nivaancare.com/dr-abhimanyu-rana/"
+      url: "https://nivaancare.com/dr-abhimanyu-rana/"
     },
     {
          id: 6,
@@ -216,111 +216,111 @@ export const featuredBlogData: FeaturedBlogDataType[] = [
         img: blog1,
         title: "Chronic Pain",
         description: "Understanding Transforaminal Lumbar Interbody Fusion (TLIF) Procedure", 
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/tlif-spine-sugery-spinal-fusion/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/tlif-spine-sugery-spinal-fusion/"
     },
     {
         id: 2,
         img: blog2,
         title: "Chronic Pain",
         description: "Understanding The Difference Between Scoliosis, Kyphosis, And Lordosis",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/difference-scoliosis-kyphosis-lordosis/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/difference-scoliosis-kyphosis-lordosis/"
     },
     {
         id: 3,
         img: blog3,
         title: "Chronic Pain", 
         description: "Understanding Shoulder Nerve Pain: Causes, Symptoms, And Treatment Options", 
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/shoulder-nerve-pain-causes-treatments/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/shoulder-nerve-pain-causes-treatments/"
     },
     {
         id: 4,
         img: blog4,
         title: "Neck Pain",
         description: "Your Ultimate Guide To Neck Spondylosis Exercises For A Pain-Free Life",
-        url: "https://www.nivaancare.com/blog/neck-pain/neck-spondylosis-exercises/"
+        url: "https://nivaancare.com/blog/neck-pain/neck-spondylosis-exercises/"
     },
     {
         id: 5,
         img: blog5,
         title: "Chronic Pain", 
         description: "Seronegative Spondyloarthritis: What You Need To Know In 2023?",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/understanding-seronegative-spondyloarthritis/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/understanding-seronegative-spondyloarthritis/"
     },
     {
         id: 6,
         img: blog6,
         title: "Chronic Pain", 
         description: "Osteoarthritis Vs Rheumatoid Arthritis: 2023 Guide",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/osteoarthritis-vs-rheumatoid-arthritis/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/osteoarthritis-vs-rheumatoid-arthritis/"
     },
     {
         id: 7,
         img: blog7,
         title: "Neck Pain",
         description: "Types Of Back Pain And How To Deal With Them In 2023",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/types-of-back-pain/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/types-of-back-pain/"
     },
     {
         id: 8,
         img: blog8,
         title: "Chronic Pain", 
         description: "Is Cervical Spondylosis Curable In 2023?",
-        url: "https://www.nivaancare.com/blog/neck-pain/is-cervical-spondylosis-curable/"
+        url: "https://nivaancare.com/blog/neck-pain/is-cervical-spondylosis-curable/"
     },
     {
         id: 9,
         img: blog9,
         title: "Chronic Pain", 
         description: "Living With Osteoarthritis: Understanding Treatments & Alternatives To Surgery",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/osteoarthritis-treatments-alternatives/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/osteoarthritis-treatments-alternatives/"
     },
     {
         id: 10,
         img: blog10,
         title: "Chronic Pain", 
         description: "Osgood Schlatter Disease In Adults: How To Find Relief Faster In 2023",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/osgood-schlatter-disease-adults-find-relief-faster-2023/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/osgood-schlatter-disease-adults-find-relief-faster-2023/"
     },
     {
         id: 11,
         img: blog11,
         title: "Chronic Pain", 
         description: "How You Sleep Matters – Ideal Sleeping Position For Back Pain",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/sleep-matters-ideal-sleeping-position-back-pain/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/sleep-matters-ideal-sleeping-position-back-pain/"
     },
     {
         id: 12,
         img: blog12,
         title: "Chronic Pain", 
         description: "What Is Acute Pain? How Is It Different From Chronic Pain?",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/acute-pain-causes-treatments/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/acute-pain-causes-treatments/"
     },
     {
         id: 13,
         img: blog13,
         title: "Chronic Pain", 
         description: "How To Cure Sciatica Permanently? Things You Should Know In 2023",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/how-cure-sciatica-permanently-things-must-know-2023/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/how-cure-sciatica-permanently-things-must-know-2023/"
     },
     {
         id: 14,
         img: blog14,
         title: "Chronic Pain", 
         description: "Finding Back Pain Relief: Your Ultimate Guide To A Pain-Free Life",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/finding-back-pain-relief-ultimate-guide-pain-free-life/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/finding-back-pain-relief-ultimate-guide-pain-free-life/"
     },
     {
         id: 15,
         img: blog15,
         title: "Chronic Pain", 
         description: "Non-Pharmacological Strategies For Effective Pain Relief: A Game-Changer",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/non-pharmacological-pain-management-strategies/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/non-pharmacological-pain-management-strategies/"
     },
     {
         id: 16,
         img: blog16,
         title: "Chronic Pain", 
         description: "Understanding Types Of Pain Management: A Comprehensive Guide",
-        url: "https://www.nivaancare.com/blog/chronic-pain-management/understanding-types-pain-management-comprehensive-guide/"
+        url: "https://nivaancare.com/blog/chronic-pain-management/understanding-types-pain-management-comprehensive-guide/"
     }
 ]

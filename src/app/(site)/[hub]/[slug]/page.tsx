@@ -5,6 +5,37 @@ import LocationStatsBar from '@/components/LocationStatsBar';
 import { getLocalOptimization, getLocalTargeting } from '@/lib/api';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({ params }: any) {
+  const resolvedParams = await params
+  const hub = resolvedParams.hub
+  const slug = resolvedParams.slug
+  let data: any = null;
+  let type: 'targeting' | 'optimization' | null = null;
+
+  const tarRes = await getLocalTargeting(slug)
+  if (tarRes && tarRes.acf) {
+    data = tarRes;
+    type = "targeting";
+  }
+  if (!data) {
+    const optRes = await getLocalOptimization(slug)
+    if (optRes && optRes.acf) {
+      data = optRes
+      type = "optimization"
+    }
+  }
+
+  if (!data || !type) return notFound();
+  return {
+    title: data?.seo?.title || "Nivaancare - India & Most Advanced Non-Surgical Pain Treatment Clinics",
+    description:
+      data?.seo?.meta_desc ||
+      "At Nivaan, our integrated approach to treating pain is clinically proven to be 9.3X* more effective than any other pain treatment in the country. We have over 24 advanced non-surgical procedures, with up to 100% insurance coverage.",
+    alternates: {
+      canonical: `https://nivaancare.com/${hub}/${slug}`,
+    },
+  }
+}
 const DynamicLocationPage = async ({ params }: any) => {
   const resolvedParams = await params
   const slug = resolvedParams.slug;

@@ -8,6 +8,21 @@ import Breadcrumb from "@/components/Breadcrumb";
 import RequestCallbackModal from "@/components/RequestCallbackModal";
 import { getSingleBlog } from "@/lib/api";
 
+export async function generateMetadata({ params }: any) {
+  const paramsSlug = await params
+  const slug = paramsSlug.slug
+  const category = paramsSlug.category
+  const data = await getSingleBlog(slug)  
+  return {
+    title: data?.yoast?.title || "Nivaancare - India & Most Advanced Non-Surgical Pain Treatment Clinics",
+    description:
+      data?.yoast?.meta_desc ||
+      "At Nivaan, our integrated approach to treating pain is clinically proven to be 9.3X* more effective than any other pain treatment in the country. We have over 24 advanced non-surgical procedures, with up to 100% insurance coverage.",
+    alternates: {
+      canonical: `https://nivaancare.com/blog/${category}/${data.slug}`,
+    },
+  }
+}
 export default async function BlogDetailPage({ params }: {
   params: Promise<{
     category: string;
@@ -67,7 +82,7 @@ export default async function BlogDetailPage({ params }: {
           <h1 className="mt-4 text-3xl font-bold text-[#0F4C92] lg:text-4xl">
             {blog.title}
           </h1>
-          <article id="article-content" className="blog-content-section prose prose-lg mt-6 max-w-none prose-h2:text-[#0F4C92] prose-h3:text-[#0F4C92] text-black">
+          <article id="article-content" className="blog-content-section single-doctor-style prose prose-lg mt-6 max-w-none prose-h2:text-[#0F4C92] prose-h3:text-[#0F4C92] text-black">
             {decodedContent}
           </article>
         </div>

@@ -7,11 +7,11 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -19,10 +19,10 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       id: 2,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },
@@ -62,11 +62,11 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -74,10 +74,10 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       id: 2,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },
@@ -155,11 +155,11 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -167,10 +167,10 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       id: 2,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },
@@ -191,11 +191,11 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -203,10 +203,10 @@ export const FooterLinksMobile4: FooterLinkSection[] = [
       id: 2,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },

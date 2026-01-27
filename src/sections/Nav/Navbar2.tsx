@@ -102,7 +102,7 @@ const Navbar2: React.FC<Navbar2Props> = ({ isHindi }) => {
         <Link href="https://pain-solutions.nivaancare.com/knee-pain/" className="px-4 py-2 hover:bg-gray-100">
           Knee Pain
         </Link>
-{/*         <Link href="https://www.nivaancare.com/next/neck-pain" className="px-4 py-2 hover:bg-gray-100">
+{/*         <Link href="https://nivaancare.com/next/neck-pain" className="px-4 py-2 hover:bg-gray-100">
           Neck Pain
         </Link> */}
         <Link href="https://pain-solutions.nivaancare.com/neck-pain/" className="px-4 py-2 hover:bg-gray-100">

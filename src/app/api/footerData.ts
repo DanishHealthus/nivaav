@@ -17,11 +17,11 @@ export const Footer3Links: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Lower Back Pain",
-          url: "https://www.nivaancare.com/back-pain-treatment/",
+          url: "https://nivaancare.com/back-pain-treatment/",
         },
         {
           subTitle: "Knee Pain",
-          url: "https://www.nivaancare.com/knee-pain-treatment/",
+          url: "https://nivaancare.com/knee-pain-treatment/",
         },
       ],
     },
@@ -31,7 +31,7 @@ export const Footer3Links: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Pain Management - Delhi",
-          url: "https://www.nivaancare.com/pain-management-clinic-in-delhi/",
+          url: "https://nivaancare.com/pain-management-clinic-in-delhi/",
         },
       ],
     },
@@ -69,11 +69,11 @@ export const Footer3Links: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Lower Back Pain",
-          url: "https://www.nivaancare.com/back-pain-treatment/",
+          url: "https://nivaancare.com/back-pain-treatment/",
         },
         {
           subTitle: "Knee Pain",
-          url: "https://www.nivaancare.com/knee-pain-treatment/",
+          url: "https://nivaancare.com/knee-pain-treatment/",
         },
       ],
     },
@@ -83,7 +83,7 @@ export const Footer3Links: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Pain Management - Delhi",
-          url: "https://www.nivaancare.com/pain-management-clinic-in-delhi/",
+          url: "https://nivaancare.com/pain-management-clinic-in-delhi/",
         },
       ],
     },
@@ -111,11 +111,11 @@ export const FooterLinks: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -180,10 +180,10 @@ export const FooterLinks: FooterLinkSection[] = [
       id: 3,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },
@@ -204,11 +204,11 @@ export const FooterLinks: FooterLinkSection[] = [
       links: [
         {
           subTitle: "Privacy Policy",
-          url: "https://www.nivaancare.com/privacy-policy/",
+          url: "https://nivaancare.com/privacy-policy/",
         },
         {
           subTitle: "Terms of Use",
-          url: "https://www.nivaancare.com/terms-and-conditions/",
+          url: "https://nivaancare.com/terms-and-conditions/",
         },
       ],
     },
@@ -238,10 +238,10 @@ export const FooterLinks: FooterLinkSection[] = [
       id: 3,
       title: "About Us",
       links: [
-        { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+        { subTitle: "Blogs", url: "https://nivaancare.com/blog/" },
         {
           subTitle: "How It Works",
-          url: "https://www.nivaancare.com/how-it-works/",
+          url: "https://nivaancare.com/how-it-works/",
         },
       ],
     },

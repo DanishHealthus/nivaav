@@ -206,8 +206,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active
 /* ---------- DESKTOP ---------- */
 @media (min-width: 1024px) {
   .blog-content-section {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .blog-content-section h1 { font-size: 2.3rem; }
@@ -537,11 +537,11 @@ p {
 }
 
 /* 2XL Screens (≥ 1536px → 2xl) */
-@media (min-width: 1536px) {
+/* @media (min-width: 1536px) {
   p {
     font-size: 18px; 
   }
-}
+} */
 
 .location-main-section h3{
   font-weight: 600;

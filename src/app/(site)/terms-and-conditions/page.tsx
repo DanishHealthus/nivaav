@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Terms and Conditions for Nivaan Care - Your trusted healthcare provider",
   alternates: {
-    canonical: "https://www.nivaancare.com/terms-and-conditions",
+    canonical: "https://nivaancare.com/terms-and-conditions",
   },
 };
 

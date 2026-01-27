@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Nivaan Care is an advanced pain management clinic focused on non-surgical pain relief through expert doctors, modern technology, and patient-first care.",
   alternates: {
-    canonical: "https://www.nivaancare.com/about-us",
+    canonical: "https://nivaancare.com/about-us",
   },
 };
 

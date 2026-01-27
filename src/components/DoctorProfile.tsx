@@ -33,9 +33,9 @@ export default function DoctorProfile({ data }: DoctorProfileProps) {
                       unoptimized
                     />
                   </div>}
-                <h2 className="text-2xl font-semibold text-[#0852A0]">
+                <h1 className="text-2xl font-semibold text-[#0852A0]">
                   {title}
-                </h2>
+                </h1>
                 <p className="mt-1 text-base font-medium text-[#06A1DC]">
                   {qualification}
                 </p>
