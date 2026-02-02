@@ -1,13 +1,16 @@
-import "@/app/style/landing.css"
+import "@/app/style/landing.css";
+
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <>
-            {children}
-        </>
-    );
+  return <>{children}</>;
 }
