@@ -9,6 +9,7 @@ import EvidenceNewsSection from "@/components/EvidenceNewsSection";
 import ReviewsStoriesSection from "@/components/ReviewsStoriesSection";
 import ExpertsSection from "@/components/ExpertsSection";
 import { getFourDoctors, getHome } from "@/lib/api";
+import HomeSchema from "@/components/Schema/HomeSchema";
 
 export async function generateMetadata() {
   const data = await getHome()
@@ -30,6 +31,7 @@ export default async function Home() {
 
   return (
     <>
+      <HomeSchema />
       <HeroSection
         title={banner?.title}
         description={banner?.info}

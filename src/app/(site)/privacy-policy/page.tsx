@@ -5,9 +5,9 @@ import { Metadata } from 'next';
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Nivaan Care",
+  title: "Privacy Policy | Nivaan Care – Patient Data Protection",
   description:
-    "Privacy Policy for Nivaan Care - Your trusted healthcare provider",
+    "Read the Nivaan Care Privacy Policy to understand how we collect, use, and protect your personal information. Your data privacy and security matter to us.",
   alternates: {
     canonical: "https://nivaancare.com/privacy-policy",
   },

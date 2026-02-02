@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "@/app/style/site.css";
 
 export default function NotFound() {
   return (

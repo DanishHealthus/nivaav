@@ -1,8 +1,11 @@
 import ConditionSection from '@/components/Condition/ConditionSection';
 import { ConditionHeroSection } from '@/components/ConditionHeroSection';
 import ConditionStatsBar from '@/components/ConditionStatsBar';
+import ArticleSchema from '@/components/Schema/ArticleSchema';
+import BreadcrumbSchema from '@/components/Schema/BreadcrumbSchema';
+import FaqSchema from '@/components/Schema/FaqSchema';
 import { getSingleCondition } from '@/lib/api';
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export async function generateMetadata({ params }: any) {
     const resolvedParams = await params
@@ -26,11 +29,42 @@ const conditionpage = async ({ params }: any) => {
     const data = await getSingleCondition(slug)
     const apiHubSlug = data?.acf?.condition_type?.[0]?.slug;
     if (!apiHubSlug || apiHubSlug !== hub) {
-        notFound();
+        redirect(`/404`);
     }
     const { acf } = data
     return (
         <>
+            <ArticleSchema
+                type={data.title}
+                url={`https://nivaancare.com/${data.slug}`}
+                title={data.seo.title}
+                description={data.seo?.meta_desc}
+                image={data.featured_image?.url}
+                publishedDate={data.date}
+            />
+            <BreadcrumbSchema
+                items={[
+                    {
+                        name: "Home",
+                        item: "https://nivaancare.com",
+                    },
+                    {
+                        name: data.acf.condition_type[0].title,
+                        item: `https://nivaancare.com/${data.acf.condition_type[0].slug}`,
+                    },
+                    {
+                        name: "Condition",
+                        item: `https://nivaancare.com/${data.acf.condition_type[0].slug}/condition`,
+                    },
+                    {
+                        name: data.title,
+                        item: `https://nivaancare.com/${data.acf.condition_type[0].slug}/condition/${data.slug}`,
+                    },
+                ]}
+            />
+            {data.acf?.faqs &&
+                <FaqSchema faqs={data.acf?.faqs} />
+            }
             <ConditionHeroSection
                 breadcrumbTitle={acf?.condition_type[0]}
                 breadcrumbSub={data?.title}

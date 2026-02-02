@@ -4,9 +4,9 @@ import { termSections } from '@/data/termData'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Nivaan Care",
+  title: "Terms & Conditions | Nivaan Care – Use of Services",
   description:
-    "Terms and Conditions for Nivaan Care - Your trusted healthcare provider",
+    "Review the Nivaan Care Terms & Conditions for website and service usage. Understand user rights, responsibilities, and our service policies.",
   alternates: {
     canonical: "https://nivaancare.com/terms-and-conditions",
   },

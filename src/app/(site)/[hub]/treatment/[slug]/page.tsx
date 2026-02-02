@@ -1,8 +1,11 @@
+import ArticleSchema from '@/components/Schema/ArticleSchema';
+import BreadcrumbSchema from '@/components/Schema/BreadcrumbSchema';
+import FaqSchema from '@/components/Schema/FaqSchema';
 import { TreatmentHeroSection } from '@/components/TreatmentHeroSection'
 import TreatmentSection from '@/components/Treatments/TreatmentSection';
 import TreatmentStatsBar from '@/components/TreatmentStatsBar';
 import { getSingleTreatment } from '@/lib/api';
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export async function generateMetadata({ params }: any) {
     const resolvedParams = await params
@@ -26,11 +29,42 @@ const treatmentpage = async ({ params }: any) => {
     const data = await getSingleTreatment(slug)
     const apiHubSlug = data?.acf?.treatment_types?.slug;
     if (!apiHubSlug || apiHubSlug !== hub) {
-        notFound();
+         redirect(`/404`);
     }
     const { acf } = data
     return (
         <>
+        <ArticleSchema
+        type={data.title}
+        url={`https://nivaancare.com/${data.slug}`}
+        title={data.seo.title}
+        description={data.seo?.meta_desc}
+        image={data.featured_image?.url}
+        publishedDate={data.date}
+      />
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            item: "https://nivaancare.com",
+          },
+          {
+            name: data.acf.treatment_types.title,
+            item: `https://nivaancare.com/${data.acf.treatment_types.slug}`,
+          },
+          {
+            name: "Condition",
+            item: `https://nivaancare.com/${data.acf.treatment_types.slug}/treatment`,
+          },
+          {
+            name: data.title,
+            item: `https://nivaancare.com/${data.acf.treatment_types.slug}/treatment/${data.slug}`,
+          },
+        ]}
+      />
+      {data.acf?.faqs &&
+        <FaqSchema faqs={data.acf?.faqs} />
+      }
             <TreatmentHeroSection
                 breadcrumbTitle={acf?.treatment_types}
                 breadcrumbSub={data?.title}

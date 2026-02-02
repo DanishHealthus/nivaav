@@ -1,6 +1,8 @@
 import DoctorProfile from "@/components/DoctorProfile";
+import PhysicianSchema from "@/components/Schema/PhysicianSchema";
+import WebPageSchema from "@/components/Schema/WebPageSchema";
 import { getSingleDoctor } from "@/lib/api";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({ params }: any) {
   const paramsSlug = await params
@@ -20,8 +22,27 @@ export default async function DoctorPage({ params }: any) {
   const paramsSlug = await params
   const slug = paramsSlug.slug
   const data = await getSingleDoctor(slug)
-  // if (data.status === 404) notFound();
-  if (data.error == "Doctor not found") notFound();
+  if (data.error == "Doctor not found") redirect(`/404`);
 
-  return <DoctorProfile data={data} />
+  const doctorUrl = `https://nivaancare.com/doctors/${data.slug}`;
+
+  return (
+    <>
+      <PhysicianSchema
+        slug={data.slug}
+        name={data.title}
+        url={doctorUrl}
+        image={data.featured_image?.url || ""}
+        description={data.seo?.meta_desc || ""}
+        medicalSpecialty="Physiotherapy"
+      />
+      <WebPageSchema
+        url={doctorUrl}
+        name={data.title}
+        description={data.seo?.meta_desc || ""}
+        physicianId={doctorUrl}
+      />
+      <DoctorProfile data={data} />
+    </>
+  );
 }

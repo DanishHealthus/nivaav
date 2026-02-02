@@ -6498,3 +6498,27 @@ body {
     font-size: .75rem;
     line-height: 1rem
 }
+
+.jen-404 {
+    background-image: url(/images/404bg.png);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--font-rubik);
+}
+.jen-404 .page-inner {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: var(--font-rubik);
+    gap: 0px;
+    padding: 50px 30px 0 30px;
+    background: linear-gradient(177.01deg, rgba(84, 177, 226, 0.2) 2.49%, rgba(81, 180, 239, 0) 47.6%);
+}
+.montu{
+    font-family: var(--font-montserrat);
+}

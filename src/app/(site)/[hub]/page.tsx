@@ -3,8 +3,11 @@ import { HubHeroSection } from '@/components/HubHeroSection';
 import HubStatsBar from '@/components/HubStatsBar';
 import LocationGrid from '@/components/locationGrid';
 import { PageBreadcrumb } from '@/components/PageBreadcrumb';
+import ArticleSchema from '@/components/Schema/ArticleSchema';
+import BreadcrumbSchema from '@/components/Schema/BreadcrumbSchema';
+import FaqSchema from '@/components/Schema/FaqSchema';
 import { getHub, getLocation } from '@/lib/api';
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export async function generateMetadata({ params }: any) {
   const resolvedParams = await params;
@@ -25,7 +28,7 @@ export async function generateMetadata({ params }: any) {
     }
   }
 
-  if (!data || !type) return notFound();
+  if (!data || !type) return redirect(`/404`);
   return {
     title: data?.seo?.title || "Nivaancare - India & Most Advanced Non-Surgical Pain Treatment Clinics",
     description:
@@ -55,11 +58,33 @@ const DynamicPage = async ({ params }: any) => {
     }
   }
 
-  if (!data || !type) return notFound();
+  if (!data || !type) return redirect(`/404`);
   const acf = data?.acf;
 
   return (
     <>
+      <ArticleSchema
+        type={data.title ? data.title : data.name ? data.name : "Page"}
+        url={`https://nivaancare.com/${data.slug}`}
+        title={data.seo.title}
+        description={data.seo?.meta_desc}
+        image={data.featured_image?.url}
+        publishedDate={data.date}
+      />
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            item: "https://nivaancare.com",
+          },
+          {
+            name: data.title ? data.title : data.name ? data.name : "Item",
+            item: `https://nivaancare.com/${data.slug}`,
+          },
+        ]}
+      />
+      {data.acf?.faqs &&
+        <FaqSchema faqs={data.acf?.faqs} />}
       {type === 'hub' && (
         <>
           <HubHeroSection
