@@ -11,7 +11,7 @@ const LandingFooter = () => {
                     height={1000}
                     alt="water"
                     src="/images/watermark.webp"
-                    className="absolute top-20 left-0 w-[800px] pointer-events-none"
+                    className="absolute -top-40 left-0 w-[800px] pointer-events-none"
                     unoptimized
                 />
             </div>

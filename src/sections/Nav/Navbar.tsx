@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ isForm2, formLocation,isForm2Physio }) 
         />
       );
     }
-    console.log(pathName)
+    // console.log(pathName)
     return (
       <Form
         formLocation={

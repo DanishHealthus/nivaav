@@ -31,6 +31,11 @@ body {
 section.home-main-section h1 span {
     color: #06A1DC;
 }
+section.home-main-section-landing h1 span {
+    color: #F36B2B;
+    font-style: italic;
+    padding-right: 4px;
+}
 section.home-main-section p i {
     color: #06A1DC;
     font-weight: 600;
@@ -52,6 +57,56 @@ section.home-main-section p span::after {
     width: 100%;
     height: 14px; 
     background: url('/images/underline.svg') no-repeat;
+    background-size: contain;
+}
+
+.home-main-section p,
+.section-landing-new-page p {
+  @apply text-base sm:text-lg lg:text-xl;
+}
+
+.section-landing-new-page ul {
+  /* padding-left: 1.5rem; */
+  padding-bottom: 0.5rem;
+  list-style: none; /* default bullet hatao */
+}
+
+.section-landing-new-page ul li {
+  position: relative;
+  padding-left: 1.5rem; /* icon ke liye space */
+}
+
+.section-landing-new-page ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 16px;
+  height: 16px;
+  background: url("/images/check.svg") no-repeat center;
+  background-size: contain;
+}
+
+section.home-main-section-landing p em {
+ position: relative;
+ font-weight: 800;
+ color: #0852A0;
+ font-style: normal;
+}
+
+section.home-main-section-landing ul li span {
+ position: relative;
+}
+
+section.home-main-section-landing ul li span::after,
+section.home-main-section-landing p em::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 14px; 
+    background: url('/images/lanunderline.svg') no-repeat;
     background-size: contain;
 }
 

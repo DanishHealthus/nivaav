@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import RequestCallbackModal from '../RequestCallbackModal'
+import { IoMdCall } from "react-icons/io";
 import LandingMobileMenuDrawer from './LandingMobileMenuDrawer'
 export const slugify = (text: string) => {
     return text
@@ -57,7 +58,19 @@ const LandingHeader = ({ menu, location, appointment }: HeaderData) => {
                     </div>
                 </nav>
                 <div className="hidden lg:block">
-                    <RequestCallbackModal buttonText={appointment} id={appointment} />
+                    {/* <RequestCallbackModal buttonText={appointment} id={appointment} /> */}
+                    <button
+                        id="call-button"
+                        className="flex items-center gap-2 text-sm md:text-base relative hover:scale-105 duration-500 cursor-pointer
+                                    bg-gradient-to-r from-[#EC6724] to-[#F05432] uppercase w-full lg:w-fit
+                                    hover:from-[#EC6724]/80 hover:to-[#F05432]/80 z-20
+                                    text-white font-normal px-6 py-3 rounded-full shadow"
+                    >
+                        <IoMdCall className='text-2xl' />
+                        {appointment}
+                    </button>
+
+
                 </div>
                 <button
                     onClick={() => setMenuOpen(true)}

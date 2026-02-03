@@ -35,7 +35,6 @@ const DoctorHomeData: React.FC<DoctorsDataProps> = ({ experts }) => {
                         nextEl: nextRef.current,
                     }}
                     onBeforeInit={(swiper) => {
-                        // 👇 Type-safe navigation fix
                         const navigation = swiper.params.navigation
                         if (typeof navigation !== 'boolean' && navigation) {
                             navigation.prevEl = prevRef.current
@@ -46,32 +45,37 @@ const DoctorHomeData: React.FC<DoctorsDataProps> = ({ experts }) => {
 
                     {experts.map((item, i) => (
                         <SwiperSlide key={i}>
-                            <div className="rounded-3xl text-left text-[#003B73]">
-                                <div className="mb-6">
-                                    <Image
-                                        src={item.featured_image.url}
-                                        alt={item?.featured_image?.alt}
-                                        width={600}
-                                        height={500}
-                                        className="rounded-xl object-cover w-full"
-                                        unoptimized
-                                    />
+                            <Link
+                                href={`/doctors/${item.slug}`}
+                                className="group"
+                            >
+                                <div className="rounded-3xl text-left text-[#003B73]">
+                                    <div className="mb-6">
+                                        <Image
+                                            src={item.featured_image.url}
+                                            alt={item?.featured_image?.alt}
+                                            width={600}
+                                            height={500}
+                                            className="rounded-xl object-cover w-full"
+                                            unoptimized
+                                        />
+                                    </div>
+                                    <div className="px-6 pb-8">
+                                        <h3 className="text-xl font-medium text-white">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-xs text-[#06A1DC] mt-1">
+                                            {item.qualification}
+                                        </p>
+                                        <p className="text-base font-semibold text-white mt-3">
+                                            <span className="font-bold">{item.experience}+ years</span> Experience
+                                        </p>
+                                        <p className="text-sm font-light text-blue-100">
+                                            {item.place}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="px-6 pb-8">
-                                    <h3 className="text-xl font-medium text-white">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-xs text-[#06A1DC] mt-1">
-                                        {item.qualification}
-                                    </p>
-                                    <p className="text-base font-semibold text-white mt-3">
-                                       <span className="font-bold">{item.experience}+ years</span> Experience
-                                    </p>
-                                    <p className="text-sm font-light text-blue-100">
-                                        {item.place}
-                                    </p>
-                                </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -81,37 +85,37 @@ const DoctorHomeData: React.FC<DoctorsDataProps> = ({ experts }) => {
             {/* ================= DESKTOP GRID ================= */}
             <div className="hidden lg:grid grid-cols-4 gap-5 xl:gap-6 pb-10">
                 {experts.map((item, i) => (
-                     <Link
+                    <Link
                         key={i}
                         href={`/doctors/${item.slug}`}
                         className="group"
                     >
-                    <div className="rounded-3xl text-left text-[#003B73]">
-                        <div className="mb-6">
-                            <Image
-                                src={item.featured_image.url}
-                                alt={item.title}
-                                width={600}
-                                height={500}
-                                className="rounded-xl object-cover w-full"
-                                unoptimized
-                            />
+                        <div className="rounded-3xl text-left text-[#003B73]">
+                            <div className="mb-6">
+                                <Image
+                                    src={item.featured_image.url}
+                                    alt={item.title}
+                                    width={600}
+                                    height={500}
+                                    className="rounded-xl object-cover w-full"
+                                    unoptimized
+                                />
+                            </div>
+                            <div className="px-6">
+                                <h3 className="text-xl xl:text-2xl font-medium text-white">
+                                    {item?.title}
+                                </h3>
+                                <p className="text-xs xl:text-sm text-[#06A1DC] mt-1">
+                                    {item.qualification}
+                                </p>
+                                <p className="text-base font-semibold text-white mt-3">
+                                    <span className="font-bold">{item.experience}+ years</span> Experience
+                                </p>
+                                <p className="text-sm font-light text-blue-100">
+                                    {item.place}
+                                </p>
+                            </div>
                         </div>
-                        <div className="px-6">
-                            <h3 className="text-xl xl:text-2xl font-medium text-white">
-                                 {item?.title}
-                            </h3>
-                            <p className="text-xs xl:text-sm text-[#06A1DC] mt-1">
-                                {item.qualification}
-                            </p>
-                            <p className="text-base font-semibold text-white mt-3">
-                               <span className="font-bold">{item.experience}+ years</span> Experience
-                            </p>
-                            <p className="text-sm font-light text-blue-100">
-                                {item.place}
-                            </p>
-                        </div>
-                    </div>
                     </Link>
                 ))}
             </div>

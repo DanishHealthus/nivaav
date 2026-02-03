@@ -29,18 +29,18 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
       document.body.style.overflow = "";
     };
   }, [open]);
- const [painArea, setPainArea] = useState<string[]>([]);
+  const [painArea, setPainArea] = useState<string[]>([]);
   const painAreaRef = useRef<HTMLInputElement>(null);
 
-const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const value = e.target.value;
+  const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
 
-  setPainArea((prev) =>
-    e.target.checked
-      ? [...prev, value]
-      : prev.filter((v) => v !== value)
-  );
-};
+    setPainArea((prev) =>
+      e.target.checked
+        ? [...prev, value]
+        : prev.filter((v) => v !== value)
+    );
+  };
 
   return (
     <>
@@ -82,20 +82,20 @@ const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 acceptCharset="UTF-8"
                 encType="multipart/form-data"
                 className="space-y-4 py-2"
-                 onSubmit={(e) => {
-    if (painArea.length === 0) {
-      e.preventDefault();
+                onSubmit={(e) => {
+                  if (painArea.length === 0) {
+                    e.preventDefault();
 
-      if (painAreaRef.current) {
-        painAreaRef.current.setCustomValidity(
-          "Please select at least one pain area"
-        );
-        painAreaRef.current.reportValidity();
-      }
-    } else {
-      painAreaRef.current?.setCustomValidity("");
-    }
-  }}
+                    if (painAreaRef.current) {
+                      painAreaRef.current.setCustomValidity(
+                        "Please select at least one pain area"
+                      );
+                      painAreaRef.current.reportValidity();
+                    }
+                  } else {
+                    painAreaRef.current?.setCustomValidity("");
+                  }
+                }}
               >
                 <input type="hidden" name="utm_source" value="" />
                 <input type="hidden" name="utm_medium" value="" />
@@ -189,27 +189,27 @@ const handlePainAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 <div>
                   <p className="font-semibold text-center mb-3">SELECT PAIN SITE *</p>
                   <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-base">
-      {["Knee", "Back", "Neck", "Shoulder", "Others"].map((item) => (
-        <label
-          key={item}
-          className="flex items-center gap-1 md:gap-2 cursor-pointer text-xs lg:text-base"
-        >
-          <input
-            type="checkbox"
-            value={item}
-            onChange={handlePainAreaChange}
-            className="h-4 w-4 rounded accent-black"
-          />
-          {item}
-        </label>
-      ))}
-    </div>
-    <input
-  ref={painAreaRef}
-  type="hidden"
-  name="Pain_Area"
-  value={painArea.join(",")}
-/>
+                    {["Knee", "Back", "Neck", "Shoulder", "Others"].map((item) => (
+                      <label
+                        key={item}
+                        className="flex items-center gap-1 md:gap-2 cursor-pointer text-xs lg:text-base"
+                      >
+                        <input
+                          type="checkbox"
+                          value={item}
+                          onChange={handlePainAreaChange}
+                          className="h-4 w-4 rounded accent-black"
+                        />
+                        {item}
+                      </label>
+                    ))}
+                  </div>
+                  <input
+                    ref={painAreaRef}
+                    type="hidden"
+                    name="Pain_Area"
+                    value={painArea.join(",")}
+                  />
 
                 </div>
                 <div>

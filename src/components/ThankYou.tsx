@@ -12,7 +12,7 @@ const ThankYou = () => {
   const phone = searchParams.get('phone')
   
   useEffect(() => {
-    console.log('phone: ', phone)
+    // console.log('phone: ', phone)
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({

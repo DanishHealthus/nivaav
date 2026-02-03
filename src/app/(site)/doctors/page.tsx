@@ -16,17 +16,17 @@ export async function generateMetadata() {
 }
 
 const doctor = async () => {
-   const data = await getDoctorsPage()
-   const data1 = await getDoctors()
+  const data = await getDoctorsPage()
+  const data1 = await getDoctors()
   return (
     <>
-    <DoctorHeroSection
-     title={data?.acf?.doctors_page_title}
+      <DoctorHeroSection
+        title={data?.acf?.doctors_page_title}
         description={data?.acf?.doctors_details}
         seo={data?.seo}
         image={data?.acf?.video_file?.url}
-    />
-    <Doctorsdata experts={data1?.data}/>
+      />
+      <Doctorsdata experts={data1?.data} />
     </>
   )
 }

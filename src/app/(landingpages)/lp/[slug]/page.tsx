@@ -6,6 +6,7 @@ import { getLandingPage } from '@/lib/api'
 import "@/app/style/site.css"
 import LandingStatsBar from '@/components/LandingPages/LandingStatsBar'
 import LandingReviews from '@/components/LandingPages/LandingReviews'
+import ExpertsSection from '@/components/ExpertsSection'
 
 const landingpages = async ({ params }: any) => {
     const paramsData = await params
@@ -18,17 +19,19 @@ const landingpages = async ({ params }: any) => {
                 title={res.acf?.banner_title}
                 description={res.acf?.banner_designation}
                 button={res.acf?.banner_button_name}
-                clinic={res.acf?.clinics_boxs}
+                clinic={res?.acf?.locations_lists}
+                list={res.acf?.banner_lists}
             />
-            <LandingStatsBar stats={res.acf.banner_numbers} />
-            <NivaanSteps
+            <ExpertsSection title={res.acf?.experts_title} description={res.acf?.experts_info} button={res.acf?.experts_button_name} doctordata={res.acf?.select_experts} />
+            {/* <NivaanSteps
                 step_title={res.acf.step_title}
                 step_designation={res.acf.step_designation}
                 step_image={res.acf.step_image}
                 steps={res.acf.steps}
                 step_button_name={res.acf.step_button_name}
-            />
-            <LandingReviews data={res.acf.patients_lists} />
+            /> */}
+            <LandingReviews title={res.acf.patient_title} data={res.acf.patients_stories} />
+            <LandingStatsBar stats={res.acf.treats_lists} />
             <LandingFooter />
         </>
     )

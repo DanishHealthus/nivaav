@@ -15,6 +15,6 @@ export interface Doctor {
 export interface ExpertsSectionProps {
   title: string;
   description: string;
-  button?: Button;
+  button?: any;
   doctordata: Doctor[]
 }

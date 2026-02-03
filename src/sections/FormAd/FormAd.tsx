@@ -24,7 +24,7 @@ interface FormAdProps {
 }
 const FormAd: React.FC<FormAdProps> = ({ isForm2, formLocation, pageRoute, cardData, show=true }) => {
   const pathName = usePathname();
-  console.log(pathName)
+  // console.log(pathName)
   const isNextPath =
     pathName.includes("/next/") &&
     pathName !== "/next/pain-medication" &&

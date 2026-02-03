@@ -78,7 +78,7 @@ const FloatingButton: React.FC<FormAdProps> = ({ isForm2, formLocation, scrollOf
   // 👇 Scroll handler
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY,isDrawerOpen)
+      // console.log(window.scrollY,isDrawerOpen)
       if(isDrawerOpen){
         setShowButton(true);
       }
