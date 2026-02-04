@@ -66,8 +66,8 @@ const LandingHeader = ({ menu, location, appointment }: HeaderData) => {
                     </div>
                 </nav>
                 <div className="hidden lg:block">
-                    {/* <RequestCallbackModal buttonText={appointment} id={appointment} /> */}
-                    <button
+                    <Link
+                        href="tel:+919070057005"
                         id="call-button"
                         className="flex items-center gap-2 text-sm md:text-base relative hover:scale-105 duration-500 cursor-pointer
                                     bg-gradient-to-r from-[#EC6724] to-[#F05432] uppercase w-full lg:w-fit
@@ -76,9 +76,7 @@ const LandingHeader = ({ menu, location, appointment }: HeaderData) => {
                     >
                         <IoMdCall className='text-2xl' />
                         {appointment}
-                    </button>
-
-
+                    </Link>
                 </div>
                 <button
                     onClick={() => setMenuOpen(true)}

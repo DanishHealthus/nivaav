@@ -10,6 +10,10 @@ import ExpertsSection from '@/components/ExpertsSection'
 import ClinicsAcrossState from '@/components/LandingPages/ClinicsAcrossState'
 import ConditionsCovered from '@/components/LandingPages/ConditionsCovered'
 import CtaHelpSection from '@/components/LandingPages/CtaHelpSection'
+import ChronicPainTable from '@/components/LandingPages/ChronicPainTable'
+import LandingFloatingButtonSite from '@/components/LandingPages/LandingFloatingButtonSite'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
+import OsteoarthritisStages from '@/components/LandingPages/OsteoarthritisStages'
 
 const landingpages = async ({ params }: any) => {
     const paramsData = await params
@@ -26,15 +30,17 @@ const landingpages = async ({ params }: any) => {
                 list={res.acf?.banner_lists}
             />
             <ExpertsSection title={res.acf?.experts_title} description={res.acf?.experts_info} button={res.acf?.experts_button_name} doctordata={res.acf?.select_experts} />
-            {/* <NivaanSteps
-                step_title={res.acf.step_title}
-                step_designation={res.acf.step_designation}
-                step_image={res.acf.step_image}
-                steps={res.acf.steps}
-                step_button_name={res.acf.step_button_name}
-            /> */}
             <LandingReviews title={res.acf.patient_title} data={res.acf.patients_stories} />
             <LandingStatsBar stats={res?.acf?.treats_lists} />
+            {res.acf.injury_stage &&
+                <OsteoarthritisStages data={res.acf} />
+            }
+            {res.acf.chronic_table &&
+                <ChronicPainTable
+                    chronic_table={res.acf.chronic_table}
+                    chronic_button_name={res.acf.chronic_button_name}
+                    chronic_title={res.acf.chronic_title}
+                />}
             <ConditionsCovered
                 conditions_title={res.acf.conditions_title}
                 conditions_button_name={res.acf.conditions_button_name}
@@ -48,6 +54,8 @@ const landingpages = async ({ params }: any) => {
                 cta_after_button_text={res.acf.cta_after_button_text}
                 clinic={res?.acf?.locations_lists}
             />
+            <ScrollToTopButton />
+            <LandingFloatingButtonSite/>
             <LandingFooter />
         </>
     )

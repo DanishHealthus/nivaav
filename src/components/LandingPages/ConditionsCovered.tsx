@@ -34,7 +34,7 @@ export default function ConditionsCovered({
         }, 100);
     };
     return (
-        <section id="conditions" className="px-4 lg:px-6 xl:px-10 2xl:px-24 pt-20">
+        <section id="conditions" className="px-4 lg:px-6 xl:px-10 2xl:px-24 pt-28">
             <div className="">
                 <h2 className="text-center text-2xl md:text-3xl xl:text-4xl font-semibold text-[#1F3C88] mb-12">
                     {conditions_title}

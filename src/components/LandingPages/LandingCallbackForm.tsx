@@ -113,12 +113,19 @@ export default function LandingCallbackForm({ clinics }: clinicData) {
             className="mb-2 w-full appearance-none rounded-full bg-white px-4 py-4 outline-none text-black text-base"
           >
             <option >Select Center *</option>
-            {clinics && clinics?.map((item, index) => (
-              <option key={index} value={item.location_name}>
-                  {item.location_name},{" "}
-                  {item.location_place}
-              </option>
-            ))}
+            {clinics
+              ?.filter(
+                (item, index, self) =>
+                  index === self.findIndex(
+                    (t) => t.location_name === item.location_name
+                  )
+              )
+              .map((item, index) => (
+                <option key={index} value={item.location_name}>
+                  {item.location_name}, {item.location_place}
+                </option>
+              ))}
+
           </select>
           <span className="pointer-events-none absolute right-5 top-7 lg:top-1/2 -translate-y-1/2">
             <MdKeyboardArrowDown className="text-2xl text-black" />
@@ -128,7 +135,7 @@ export default function LandingCallbackForm({ clinics }: clinicData) {
         <div className="flex justify-center items-center">
           <button
             type="submit"
-            className="w-52 text-center mx-auto rounded-full bg-[#FF6A39] hover:bg-[#FF6A39]/90 px-6 py-3 cursor-pointer font-normal hover:scale-[1.02] duration-500"
+            className="w-52 lg:w-2/3 text-center mx-auto rounded-full bg-[#FF6A39] hover:bg-[#FF6A39]/90 px-6 py-3 cursor-pointer font-normal hover:scale-[1.02] duration-500"
           >
             REQUEST CALL BACK
           </button>
