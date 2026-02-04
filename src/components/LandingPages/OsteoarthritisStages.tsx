@@ -67,10 +67,10 @@ const OsteoarthritisStages = ({ data }: Props) => {
                 <div style={{ boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px' }} className="bg-white rounded-3xl p-6 md:p-10 relative">
                     <div className="">
                         {injury_stage.map((stage, index) => (
-                            <div key={index} className="relative flex pb-10 gap-6">
+                            <div key={index} className={`relative flex gap-6 ${index !== injury_stage.length - 1 ? 'pb-10' : 'pb-0'}`}>
                                 {index !== injury_stage.length - 1 && (
                                     <div
-                                        className="absolute left-[7px] top-6 w-[2px] h-full hidden sm:block"
+                                        className="absolute left-[7px] top-6 w-[2px] h-full block"
                                         style={{
                                             background: `linear-gradient( to bottom,
                                                     ${stage.stage_color},
@@ -79,7 +79,6 @@ const OsteoarthritisStages = ({ data }: Props) => {
                                         }}
                                     />
                                 )}
-
                                 <div className="relative z-10 block">
                                     <span
                                         className="w-4 h-4 rounded-full block mt-2"
