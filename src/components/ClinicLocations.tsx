@@ -37,13 +37,13 @@ const clinics = [
     address2: "Enclave Part 2, Palam, New Delhi - 110045",
     locationUrl: "https://maps.app.goo.gl/MxtLh7BatsXRYBgC7"
   },
-  {
-    id: 6,
-    area: "Nehru Place, South Delhi",
-    address: "Nivaan Clinic, Apollo Spectra, Plot no. A, 2, Outer Ring Rd, near Nehru Place Flyover, Greater Kailash-1,",
-    address2: "Chirag Enclave, Delhi 110048",
-    locationUrl: "https://maps.app.goo.gl/gNYF68MxRDyL6Nqv8"
-  },
+  // {
+  //   id: 6,
+  //   area: "Nehru Place, South Delhi",
+  //   address: "Nivaan Clinic, Apollo Spectra, Plot no. A, 2, Outer Ring Rd, near Nehru Place Flyover, Greater Kailash-1,",
+  //   address2: "Chirag Enclave, Delhi 110048",
+  //   locationUrl: "https://maps.app.goo.gl/gNYF68MxRDyL6Nqv8"
+  // },
   {
     id: 12,
     area: "South Delhi",
@@ -65,13 +65,13 @@ const clinics = [
     address2: "Delhi - 110029",
     locationUrl: "https://maps.app.goo.gl/fBxgFBDu4rz9DVW48"
   },
-  {
-    id: 8,
-    area: "Noida",
-    address: "Nivaan Clinic, Noida Multispeciality Clinic, Sector 66 Noida,",
-    address2: "Uttar Pradesh - 201307",
-    locationUrl: "https://maps.app.goo.gl/fKyuw9KuDL3DvL1T6"
-  },
+  // {
+  //   id: 8,
+  //   area: "Noida",
+  //   address: "Nivaan Clinic, Noida Multispeciality Clinic, Sector 66 Noida,",
+  //   address2: "Uttar Pradesh - 201307",
+  //   locationUrl: "https://maps.app.goo.gl/fKyuw9KuDL3DvL1T6"
+  // },
   {
     id: 14,
     area: "Noida",
@@ -103,20 +103,20 @@ const clinics = [
 ];
 
 const clinicsMumbais = [
-  {
-    id: 10,
-    area: "Mumbai",
-    address: "Nivaan Clinic, Lilavati Hospital, A-791, Bandra Reclamation Rd, General Arunkumar Vaidya Nagar, Bandra West,",
-    address2: "Mumbai, Maharashtra 400050",
-    locationUrl: "https://maps.app.goo.gl/M65Yiw3gzRDDdNcv9"
-  },
-  {
-    id: 10,
-    area: "Central Mumbai",
-    address: "Nivaan Clinic, Wockhardt Hospital Police Station, 1877, Dr Anandrao Nair Marg, near Agripada, Mumbai Central,",
-    address2: "Mumbai, Maharashtra 400011",
-    locationUrl: "https://maps.app.goo.gl/6Z97my7mf92dHEs26"
-  },
+  // {
+  //   id: 10,
+  //   area: "Mumbai",
+  //   address: "Nivaan Clinic, Lilavati Hospital, A-791, Bandra Reclamation Rd, General Arunkumar Vaidya Nagar, Bandra West,",
+  //   address2: "Mumbai, Maharashtra 400050",
+  //   locationUrl: "https://maps.app.goo.gl/M65Yiw3gzRDDdNcv9"
+  // },
+  // {
+  //   id: 10,
+  //   area: "Central Mumbai",
+  //   address: "Nivaan Clinic, Wockhardt Hospital Police Station, 1877, Dr Anandrao Nair Marg, near Agripada, Mumbai Central,",
+  //   address2: "Mumbai, Maharashtra 400011",
+  //   locationUrl: "https://maps.app.goo.gl/6Z97my7mf92dHEs26"
+  // },
   {
     id: 10,
     area: "Navi Mumbai",

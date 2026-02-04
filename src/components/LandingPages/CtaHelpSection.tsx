@@ -34,11 +34,11 @@ export default function CtaHelpSection({
     <section id="book-appointment2" className="px-4 bg-[#F5FAFF] lg:px-6 xl:px-10 2xl:px-24 py-14">
       <div
         className="relative overflow-hidden rounded-[40px] lg:rounded-[60px]
-        bg-[#99E3FF]/90 border-2 border-[#99E3FF]/80 p-6 md:p-8 lg:p-12"
+        bg-[#99E3FF]/90 border-2 border-[#99E3FF]/80 p-4 md:p-8 lg:p-12"
       >
         <div className="grid grid-cols-1 lg:grid-cols-[55%_40%] gap-10 items-center">
           <div className="w-full flex justify-center">
-            <div className="relative w-full p-6">
+            <div className="relative w-full 2xl:p-6">
               <LandingCallbackForm clinics={clinic} />
             </div>
           </div>
@@ -47,6 +47,7 @@ export default function CtaHelpSection({
               {cta_title}
             </h2>
             <div className="text-base md:text-lg text-[#0F172A] leading-relaxed
+             [&_p]:text-xl
               [&_ul]:mt-4 [&_ul]:space-y-3
               [&_li]:flex [&_li]:items-start [&_li]:gap-3
               [&_li]:before:content-['✔']
@@ -63,7 +64,7 @@ export default function CtaHelpSection({
               >
                 {cta_button_name}
               </button>
-              <p className="mt-3 text-xs md:text-sm text-gray-600">
+              <p className="my-5 text-xs md:text-sm text-gray-600">
                 {cta_after_button_text}
               </p>
             </div>

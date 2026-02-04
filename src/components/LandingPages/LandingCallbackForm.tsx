@@ -112,7 +112,7 @@ export default function LandingCallbackForm({ clinics }: clinicData) {
             required
             className="mb-2 w-full appearance-none rounded-full bg-white px-4 py-4 outline-none text-black text-base"
           >
-            <option disabled >Select Center *</option>
+            <option >Select Center *</option>
             {clinics && clinics?.map((item, index) => (
               <option key={index} value={item.location_name}>
                   {item.location_name},{" "}
@@ -128,7 +128,7 @@ export default function LandingCallbackForm({ clinics }: clinicData) {
         <div className="flex justify-center items-center">
           <button
             type="submit"
-            className="w-2/3 mx-auto rounded-full bg-[#FF6A39] hover:bg-[#FF6A39]/90 py-3 cursor-pointer font-normal hover:scale-[1.02] duration-500"
+            className="w-52 text-center mx-auto rounded-full bg-[#FF6A39] hover:bg-[#FF6A39]/90 px-6 py-3 cursor-pointer font-normal hover:scale-[1.02] duration-500"
           >
             REQUEST CALL BACK
           </button>
