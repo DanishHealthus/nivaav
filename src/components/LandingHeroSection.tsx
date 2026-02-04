@@ -1,6 +1,6 @@
+"use client"
 import parse from "html-react-parser";
 import he from "he";
-import RequestCallbackModal from "./RequestCallbackModal";
 import LandingCallbackForm from "./LandingPages/LandingCallbackForm";
 import Image from "next/image";
 
@@ -50,6 +50,14 @@ export function LandingHeroSection({
         },
     });
 
+    const handleScroll = () => {
+        setTimeout(() => {
+            const el = document.getElementById("book-appointment2");
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }, 100);
+    };
     return (
         <section id="book-appointment" className="relative home-main-section-landing w-full bg-gradient-to-b from-[#edf8fc] to-[#edf8fc] lg:pt-10 lg:pb-20">
             <img
@@ -58,7 +66,7 @@ export function LandingHeroSection({
             />
 
             <div className="pt-20 px-4 lg:px-10 xl:px-16 2xl:px-24">
-                <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] items-center gap-10 pt-5 pb-16 lg:py-10">
+                <div className="grid grid-cols-1 lg:grid-cols-[55%_40%] items-center gap-10 pt-5 pb-16 lg:py-10">
                     <div className="landing-h3-bold landing-h4-bold md:text-center flex flex-col justify-center">
                         <h1 className="text-[28px] sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-blue-900 leading-tight">
                             {parsedTitle}
@@ -80,16 +88,23 @@ export function LandingHeroSection({
                         </div>
                         {button &&
                             <div className="flex justify-center pt-5">
-                                <RequestCallbackModal buttonText={button} id={button} />
-                            </div>
+                            <button onClick={handleScroll}
+                                className="block text-sm md:text-base relative hover:scale-105 duration-500 cursor-pointer
+                                    bg-gradient-to-r from-[#EC6724] to-[#F05432] uppercase w-full lg:w-fit
+                                    hover:from-[#EC6724]/80 hover:to-[#F05432]/80 z-20
+                                    text-white font-normal px-6 py-3 rounded-full shadow"
+                            >
+                                {button}
+                            </button>
+                        </div>
                         }
                     </div>
-                    <div>
+                    <div id="book-appointment">
                         <div className="relative z-20 xl:w-4/5 mx-auto flex justify-center">
                             <LandingCallbackForm clinics={clinic} />
                         </div>
                         <div className="flex justify-center pt-8 lg:pt-5">
-                            <Image className="relative z-50 " width={250} height={200} alt="google" src="/images/google-logo.png" unoptimized />
+                            <Image className="relative z-20" width={250} height={200} alt="google" src="/images/google-logo.png" unoptimized />
                         </div>
                     </div>
                 </div>

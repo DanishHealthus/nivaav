@@ -14,7 +14,7 @@ const LandingReviews = ({ title, data }: Props) => {
   return (
     <div className='overview-section py-20 space-y-6'>
       <div className="text-center max-w-5xl mx-auto section-landing-new-page">
-        <h2 className="text-3xl lg:text-3xl xl:text-4xl font-semibold text-[#0052A9]">{title}</h2>
+        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#0052A9]">{title}</h2>
       </div>
       <div className="px-4 lg:px-6 xl:px-10 2xl:px-16 text-white">
         <Swiper

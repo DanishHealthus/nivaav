@@ -9,7 +9,6 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
-import Link from 'next/link'
 
 const DoctorLandingData: React.FC<DoctorsDataProps> = ({ experts }) => {
     const prevRef = useRef<HTMLButtonElement>(null)
@@ -64,7 +63,7 @@ const DoctorLandingData: React.FC<DoctorsDataProps> = ({ experts }) => {
                                         {item.qualification}
                                     </p>
                                     <p className="text-base font-semibold text-white mt-3">
-                                       <span className="font-bold">{item.experience}+ years</span> Experience
+                                        <span className="font-bold">{item.experience}+ years</span> Experience
                                     </p>
                                     <p className="text-sm font-light text-blue-100">
                                         {item.place}
@@ -78,9 +77,10 @@ const DoctorLandingData: React.FC<DoctorsDataProps> = ({ experts }) => {
             </div>
 
             {/* ================= DESKTOP GRID ================= */}
-            <div className="hidden lg:grid grid-cols-4 gap-5 xl:gap-6 pb-10">
+            <div className="hidden lg:flex flex-wrap justify-center gap-5 xl:gap-6 pb-10">
                 {experts.map((item, i) => (
-                    <div key={i} className="rounded-3xl text-left text-[#003B73]">
+                    <div key={i} className="rounded-3xl text-left text-[#003B73] lg:max-w-[23%] w-full"
+                    >
                         <div className="mb-6">
                             <Image
                                 src={item.featured_image.url}
@@ -93,13 +93,13 @@ const DoctorLandingData: React.FC<DoctorsDataProps> = ({ experts }) => {
                         </div>
                         <div className="px-6">
                             <h3 className="text-xl xl:text-2xl font-medium text-white">
-                                 {item?.title}
+                                {item?.title}
                             </h3>
                             <p className="text-xs xl:text-sm text-[#06A1DC] mt-1">
                                 {item.qualification}
                             </p>
                             <p className="text-base font-semibold text-white mt-3">
-                               <span className="font-bold">{item.experience}+ years</span> Experience
+                                <span className="font-bold">{item.experience}+ years</span> Experience
                             </p>
                             <p className="text-sm font-light text-blue-100">
                                 {item.place}

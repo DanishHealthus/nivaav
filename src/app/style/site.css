@@ -31,7 +31,8 @@ body {
 section.home-main-section h1 span {
     color: #06A1DC;
 }
-section.home-main-section-landing h1 span {
+section.home-main-section-landing h1 span,
+section.home-main-section-landing h2 span {
     color: #F36B2B;
     font-style: italic;
     padding-right: 4px;

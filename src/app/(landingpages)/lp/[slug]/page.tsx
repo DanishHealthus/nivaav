@@ -7,6 +7,9 @@ import "@/app/style/site.css"
 import LandingStatsBar from '@/components/LandingPages/LandingStatsBar'
 import LandingReviews from '@/components/LandingPages/LandingReviews'
 import ExpertsSection from '@/components/ExpertsSection'
+import ClinicsAcrossState from '@/components/LandingPages/ClinicsAcrossState'
+import ConditionsCovered from '@/components/LandingPages/ConditionsCovered'
+import CtaHelpSection from '@/components/LandingPages/CtaHelpSection'
 
 const landingpages = async ({ params }: any) => {
     const paramsData = await params
@@ -31,7 +34,20 @@ const landingpages = async ({ params }: any) => {
                 step_button_name={res.acf.step_button_name}
             /> */}
             <LandingReviews title={res.acf.patient_title} data={res.acf.patients_stories} />
-            <LandingStatsBar stats={res.acf.treats_lists} />
+            <LandingStatsBar stats={res?.acf?.treats_lists} />
+            <ConditionsCovered
+                conditions_title={res.acf.conditions_title}
+                conditions_button_name={res.acf.conditions_button_name}
+                condition_boxs_list={res.acf.condition_boxs_list}
+            />
+            <ClinicsAcrossState data={res.acf} />
+            <CtaHelpSection
+                cta_title={res.acf.cta_title}
+                cta_description={res.acf.cta_description}
+                cta_button_name={res.acf.cta_button_name}
+                cta_after_button_text={res.acf.cta_after_button_text}
+                clinic={res?.acf?.locations_lists}
+            />
             <LandingFooter />
         </>
     )

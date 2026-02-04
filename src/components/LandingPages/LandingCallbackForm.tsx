@@ -54,7 +54,7 @@ export default function LandingCallbackForm({ clinics }: clinicData) {
         acceptCharset="UTF-8"
         encType="multipart/form-data"
         onSubmit={handleSubmit}
-        className="w-full"
+        className="w-full 2xl:p-6"
       >
         <input type="hidden" name="utm_source" value="" />
         <input type="hidden" name="utm_medium" value="" />

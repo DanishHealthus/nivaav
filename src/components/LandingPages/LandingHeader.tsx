@@ -26,10 +26,18 @@ interface HeaderData {
 }
 const LandingHeader = ({ menu, location, appointment }: HeaderData) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const handleScroll = () => {
+        setTimeout(() => {
+            const el = document.getElementById("book-appointment");
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }, 100);
+    };
     return (
         <header className="fixed top-0 left-0 z-40 w-full bg-gradient-to-t from-[#EEF8FD]/0 font-sans to-white">
-            <div className="xl:px-10 2xl:px-24 flex items-center justify-between py-4 px-4">
-                <Link href="/">
+            <div className="xl:px-10 2xl:px-28 flex items-center justify-between py-4 px-4">
+                <Link onClick={handleScroll} href="#">
                     <Image src="/images/logo.svg" alt="Nivaan Logo" width={170} height={40} className="h-10 lg:h-20 lg:bg-white lg:px-6 lg:shadow-lg lg:rounded-4xl" unoptimized />
                 </Link>
 

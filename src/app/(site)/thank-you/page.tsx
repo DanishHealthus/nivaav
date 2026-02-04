@@ -29,12 +29,12 @@ const page = () => {
                         <div className='bg-white text-center rounded-[30px]   p-6  border-[#06A1DC] border'>
                             <span className='text-[#06A1DC] uppercase text-sm font-medium'>Visit Us</span>
                             <h2 className='text-[#284599] font-bold text-2xl capitalize my-3'>We have clinics across</h2>
-                            <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-4 text-left gap-x-10 gap-y-4 my-10 text-base">
+                            <div className="grid grid-cols grid-cols-2 lg:grid-cols-4 text-left md:gap-x-10 gap-y-4 my-10 text-base">
                                 {LOCATION_MENU.items.map((item, index) => (
                                     <Link
                                         key={index}
                                         href={item.url || "#"}
-                                        className="hover:text-[#06A1DC] text-lg capitalize text-black bg-white px-6 transition flex font-normal items-center gap-1"
+                                        className="hover:text-[#06A1DC] text-base lg:text-lg capitalize text-black bg-white px-2 md:px-6 transition flex font-normal items-center gap-1"
                                     >
                                         <MapPin className="text-[#06A1DC]" size={16} />
                                         {item.title}
