@@ -1,10 +1,12 @@
+import ReviewsStoriesSection from '@/components/ReviewsStoriesSection'
 import { LOCATION_MENU } from '@/data/footer'
+import { reviews, stories } from '@/data/testimonial'
 import { MapPin } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
-    return (
+    return (<>
         <section className="w-full flex flex-col items-center justify-center bg-white jen-404">
             <div className="page-inner ">
                 <div className='py-20'>
@@ -46,6 +48,10 @@ const page = () => {
                 </div>
             </div>
         </section>
+        <ReviewsStoriesSection
+                reviews={reviews}
+                stories={stories}
+              /></>
     )
 }
 

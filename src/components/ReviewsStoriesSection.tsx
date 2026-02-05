@@ -59,7 +59,7 @@ export default function ReviewsStoriesSection({ reviews, stories }: Props) {
   }, [reviews.start_number]);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#F3F7FF] to-white">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="lg:flex items-start gap-6 xl:gap-10">
           {/* Google Reviews */}
@@ -176,7 +176,7 @@ function ReviewCard({ item, star }: { item: Review; star: string }) {
   }, []);
 
   return (
-    <div className="bg-white rounded-[50px] p-5 xl:p-6 2xl:p-8 shadow-[0_3px_20px_rgba(0,0,0,0.1)]">
+    <div className="bg-white rounded-[50px] p-8 xl:p-6 2xl:p-8 shadow-[0_3px_20px_rgba(0,0,0,0.1)]">
       <div className="flex items-center gap-3 mb-3">
         <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
           {item.name[0]}
