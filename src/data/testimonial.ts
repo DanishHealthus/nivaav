@@ -97,7 +97,7 @@ export const reviews = {
 
 export const stories = {
     "title": "Patient Stories",
-    "info": "Hear from people who were once living with chronic pain and found lasting relief and support through Nivaan’s caring approach.",
+    "info": "Listen to the experiences of people who were once living with chronic pain but who found lasting relief and support through Nivaan's approach.",
     "items": [
         {
             "name": "Kundnika Gupta ",
