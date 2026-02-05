@@ -36,7 +36,7 @@ export default function CtaHelpSection({
         className="relative overflow-hidden rounded-[40px] lg:rounded-[60px]
         bg-[#99E3FF]/90 border-2 border-[#99E3FF]/80 p-4 md:p-8 lg:p-12"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-[50%_40%] gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[50%_44%] gap-10 items-center">
           <div className="w-full flex justify-center">
             <div className="relative w-full 2xl:p-6">
               <LandingCallbackForm clinics={clinic} />
@@ -64,7 +64,7 @@ export default function CtaHelpSection({
               >
                 {cta_button_name}
               </button>
-              <p className="my-5 text-xs md:text-sm text-gray-600">
+              <p className="my-5 text-center lg:text-left text-xs md:text-sm text-gray-600">
                 {cta_after_button_text}
               </p>
             </div>

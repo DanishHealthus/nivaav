@@ -15,6 +15,7 @@ const LandingFloatingButtonSite = () => {
     img: FaUserDoctor,
     alt: "Book Appointment",
     label: "Book Appt.",
+    color: "#243c9b"
   },
   // {
   //   href: "https://wa.me/+919070057005?text=Hello",
@@ -33,6 +34,7 @@ const LandingFloatingButtonSite = () => {
     img: MdCall,
     alt: "Call Us",
     label: "Call Us",
+    color: "#F05432"
   },
 ];
 
@@ -66,12 +68,13 @@ const LandingFloatingButtonSite = () => {
         <CgMail className="text-2xl" />
       </Link>
     </div> */}
-    <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50 flex justify-around items-center py-2 shadow-md">
+    <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50 flex justify-around items-center shadow-md">
         {buttons.map((btn, index) => (
           <Link
-            key={index}
+          key={index}
+          style={{background : btn.color}}
             href={btn.href}
-            className="flex flex-col items-center justify-center text-xs text-[#370025] font-medium"
+            className="flex flex-col py-3 w-full items-center justify-center text-xs text-white font-medium"
           >
             <btn.img             
               className="h-6 w-6 object-contain mb-1"

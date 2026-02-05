@@ -39,11 +39,11 @@ export default function ConditionsCovered({
                 <h2 className="text-center text-2xl md:text-3xl xl:text-4xl font-semibold text-[#1F3C88] mb-12">
                     {conditions_title}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-6">
                     {condition_boxs_list.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-4xl border border-[#E6EEF8] shadow-[0_6px_20px_rgba(0,0,0,0.08)] p-6 flex flex-col"
+                            className="bg-white rounded-4xl border border-[#E6EEF8] shadow-[0_6px_20px_rgba(0,0,0,0.08)] p-6 lg:p-5 xl:p-6 flex flex-col"
                         >
                             <div className="flex gap-3 items-center justify-start">
                                 <div className="w-fit">
@@ -62,7 +62,7 @@ export default function ConditionsCovered({
                                     {item.title}
                                 </h3>
                             </div>
-                            <ul className="space-y-3 p-3">
+                            <ul className="space-y-3 p-3 lg:p-0 xl:p-2 2xl:p-3">
                                 {item.list_name.map((list, i) => (
                                     <li key={i} className="flex items-start gap-2 text-base text-[#334155]">
                                         <span className="mt-1.5 h-2 w-2 rounded-full bg-[#F36A2F] flex-shrink-0" />

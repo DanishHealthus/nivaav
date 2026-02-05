@@ -5,18 +5,22 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useRef } from 'react';
 
 interface Props {
   title: string;
   data: any;
 }
 const LandingReviews = ({ title, data }: Props) => {
+  const prevRef = useRef<HTMLButtonElement | null>(null)
+  const nextRef = useRef<HTMLButtonElement | null>(null)
+
   return (
     <div className='overview-section py-20 space-y-6'>
       <div className="text-center max-w-5xl mx-auto section-landing-new-page">
         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#0052A9]">{title}</h2>
       </div>
-      <div className="px-4 lg:px-6 xl:px-10 2xl:px-16 text-white">
+      <div className="sm:px-4 lg:px-6 xl:px-10 2xl:px-16 text-white">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={1}
@@ -27,10 +31,20 @@ const LandingReviews = ({ title, data }: Props) => {
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
-            640: { slidesPerView: 1.2 },
+            640: { slidesPerView: 2 },
             1024: { slidesPerView: 2 },
             1280: { slidesPerView: 2.5 },
             1400: { slidesPerView: 3 },
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            // @ts-ignore
+            swiper.params.navigation.prevEl = prevRef.current
+            // @ts-ignore
+            swiper.params.navigation.nextEl = nextRef.current
           }}
         >
           {data.map((item: any, index: number) => {
@@ -64,6 +78,21 @@ const LandingReviews = ({ title, data }: Props) => {
           })}
 
         </Swiper>
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            ref={prevRef}
+            className="w-12 h-12 rounded-full bg-[#003B73] flex items-center justify-center shadow-md hover:bg-[#002b55] transition"
+          >
+            <span className="text-white text-xl">←</span>
+          </button>
+
+          <button
+            ref={nextRef}
+            className="w-12 h-12 rounded-full bg-[#003B73] flex items-center justify-center shadow-md hover:bg-[#002b55] transition"
+          >
+            <span className="text-white text-xl">→</span>
+          </button>
+        </div>
       </div>
 
     </div>

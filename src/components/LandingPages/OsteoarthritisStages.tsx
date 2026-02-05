@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import parse from "html-react-parser";
 
@@ -36,6 +35,14 @@ const OsteoarthritisStages = ({ data }: Props) => {
         injury_stage,
     } = data;
 
+    const handleScroll = () => {
+        setTimeout(() => {
+            const el = document.getElementById("book-appointment");
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }, 100);
+    };
     return (
         <section className="px-5 md:px-10 xl:px-24 pt-20">
             <div className="grid grid-cols-1 lg:grid-cols-[55%_40%] gap-12 items-start">
@@ -56,7 +63,12 @@ const OsteoarthritisStages = ({ data }: Props) => {
                         />
                     </div>
                     <div className="mt-8">
-                        <button className="bg-[#f26b3a] hover:bg-[#e85f2e] text-white font-semibold px-8 py-4 rounded-full transition">
+                        <button onClick={handleScroll}
+                            className="block text-sm md:text-base relative hover:scale-105 duration-500 cursor-pointer
+                                    bg-gradient-to-r from-[#EC6724] to-[#F05432] uppercase w-full lg:w-fit mx-auto
+                                    hover:from-[#EC6724]/80 hover:to-[#F05432]/80 z-20
+                                    text-white font-normal px-6 py-3 rounded-full shadow"
+                        >
                             {injury_button_name}
                         </button>
                         <p className="text-sm text-gray-500 mt-3">
@@ -70,7 +82,7 @@ const OsteoarthritisStages = ({ data }: Props) => {
                             <div key={index} className={`relative flex gap-6 ${index !== injury_stage.length - 1 ? 'pb-10' : 'pb-0'}`}>
                                 {index !== injury_stage.length - 1 && (
                                     <div
-                                        className="absolute left-[7px] top-6 w-[2px] h-full block"
+                                        className="absolute left-[7px] top-6 w-[2px] h-full block animate-pulse"
                                         style={{
                                             background: `linear-gradient( to bottom,
                                                     ${stage.stage_color},
@@ -81,7 +93,7 @@ const OsteoarthritisStages = ({ data }: Props) => {
                                 )}
                                 <div className="relative z-10 block">
                                     <span
-                                        className="w-4 h-4 rounded-full block mt-2"
+                                        className="w-4 h-4 rounded-full block mt-2 animate-spin"
                                         style={{ backgroundColor: stage.stage_color }}
                                     />
                                 </div>
