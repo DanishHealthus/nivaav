@@ -148,9 +148,8 @@ const RequestCallbackModal = ({ buttonText, id }: any) => {
                     }}
                   />
                   <input
-                    placeholder="Email Address *"
+                    placeholder="Email Address"
                     type="email"
-                    required
                     className="mb-2 w-full rounded-full bg-white px-6 py-2.5 lg:py-4 placeholder:text-sm lg:placeholder:text-base outline-none text-black text-sm lg:text-base"
                   />
                   <div className="relative">
