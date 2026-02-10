@@ -22,8 +22,8 @@ export default function ContactSection({ data }: { data: ContactData }) {
                 <div className="flex flex-col gap-6">
                     {contact_info.map((item, index) => (
                         <div key={index} className="flex items-start gap-4">
-                            <div className="text-blue-600 mt-1">
-                            </div>
+                            {/* <div className="text-blue-600 mt-1">
+                            </div> */}
                             <div>
                                 <h3 style={{ letterSpacing: '1px' }} className="text-xs font-medium uppercase text-[#06A1DC]">{item.subtitle}</h3>
                                 <Link
